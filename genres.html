@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Mania</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="grid-container">
+      <nav class="navbar">
+        <div class="container">
+            <div class="logo"><span class="mania">Movie</span> Mania</div>
+          <div class="search-filter">
+            <input
+              type="search"
+              class="search"
+              id="lookup"
+              placeholder=" Search"
+            />
+          </div>
+
+          <button class="btn btn-mode">
+            <img src="./assets/light_mode.svg" alt="login" class="utility" />
+            <span class="mode">Light Mode</span>
+          </button>
+          <button class="btn btn-dark">
+            <img src="./assets/dark_mode.svg" alt="login" class="utility" />
+            <span class="mode">Dark Mode</span>
+          </button>
+        </div>
+      </nav>
+      <aside class="sidebar">
+        <ul class="side-lists">
+          <li>
+            <a href="./index.html"
+              ><img
+                src="./assets/home-svgrepo-com.svg"
+                alt="home-icon"
+                class="side-icon"
+              />HOME</a
+            >
+          </li>
+          <li>
+            <a href="./trends.html"
+              ><img
+                src="./assets/movies-svgrepo-com.svg"
+                alt="movie-icon"
+                class="side-icon"
+              />TRENDING</a
+            >
+          </li>
+
+          <li class="current-list">
+            <a href="./genres.html" class="current-link"
+              ><img
+                src="./assets/color-palette-svgrepo-com (1).svg"
+                alt="palette-icon"
+                class="side-icon"
+              />GENRE</a
+            >
+          </li>
+          <li>
+            <a href="./top-rated.html"
+              ><img
+                src="./assets/trophy-svgrepo-com.svg"
+                alt="palette-icon"
+                class="side-icon"
+              />TOP RATED</a
+            >
+          </li>
+          <li>
+            <a href="./watch-list.html"
+              ><span class="side-icon suit">&bigstar;</span> WATCHLIST</a
+            >
+          </li>
+        </ul>
+      </aside>
+      <main class="main-container">
+        <div class="tabs">
+          <div class="tab-topic">
+            <div class="topic_head">
+              <h2>Genres:, TopRated:, Sort default</h2>
+            </div>
+            <div class="topic_numbers">
+              <div class="numbers">46,403 items</div>
+            </div>
+          </div>
+
+
+          <section class="sect">
+            <ul class="tab-select">
+              <li>
+                <h3 class="topic">Genres</h3>
+              </li>
+
+              <li>
+                <span class="filter-search">
+                  <img
+                    src="./assets/filter-2.svg"
+                    alt="filter-icon"
+                    class="utility"
+                  />
+                  <h3 class="filter-text">Filter</h3>
+                </span>
+              </li>
+            </ul>
+            <h3 class="category">Action</h3>
+            <div class="video-grid">
+              <div class="vid_collection vid_collection--2"></div>
+            </div>
+          </section>
+          <section class="sect">
+            <h3 class="category">Comedy</h3>
+            <div class="video-grid">
+              <div class="vid_collection vid_collection--3"></div>
+            </div>
+          </section>
+          <section class="sect">
+            <h3 class="category">Horror</h3>
+            <div class="video-grid">
+              <div class="vid_collection vid_collection--4"></div>
+            </div>
+          </section>
+          <section class="sect">
+            <h3 class="category">Romance</h3>
+            <div class="video-grid">
+              <div class="vid_collection vid_collection--5"></div>
+            </div>
+          </section>
+        </div>
+      </main>
+      <footer class="foot">
+        <p class="right"> &copy; 2024 MovieMania, Allright Reserved.</p>
+        <p class="foot-info">Designed by<a href="https://github.com/muizaddy" class="developer">Muiz Adebayo</a>.</p>
+      </footer>
+      <ul class="search-lists">
+      </ul> 
+    </div>
+      <!-- Movie List -->
+      <div class="movie-list hidden">
+        <!-- Movies will be rendered here dynamically -->
+      
+      
+      <!-- Movie Details Section -->
+      <div class="movie-details">
+         <button class="back-button">Back</button>
+       <div class="main-movie">
+        <div class="movie-left">
+          <img class="movie-poster" src="./assets/grow.jpg" alt="Movie Poster">
+         </div>
+        <div class="movie-right">
+         <div class="movie-info">
+           <h1 class="movie-title">Frozen(Plus Bonus Features)</h1>
+           <p class="date">Release Date:<span class="release-date">2024</span></p>
+           
+           <p class="movie-overview">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, quidem!</p>
+           <p class="ratings">Rating:<span id="ratings-info"></span></p>
+           <p class="genres">Genres:<span id="genres-info">Action</span></p>
+           <div class="movie-btns">
+             <button class="add btn-watch">Add to Watchlist</button>
+             <button class="remove btn-watch">Remove from Watchlist</button>
+            </div>
+   </div>
+      
+        </div>
+       </div>
+      </div>
+      </div>
+      
+      <div class="overlay hidden"></div>
+    <script defer src="./main.js"></script>
+  </body>
+</html>
