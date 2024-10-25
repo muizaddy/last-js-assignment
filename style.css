@@ -653,6 +653,7 @@ body {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    flex-wrap: wrap;
     gap: 5px;
     height: 100%;
     margin-bottom: 20px;
