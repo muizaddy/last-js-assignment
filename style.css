@@ -644,6 +644,7 @@ body {
     
     .main-container .video-grid .vid_collection .trending .trend_img {
       width: 100px;
+      height: 175px;
       border-radius: 5px;
       object-fit: cover;
       transition: transform 0.5s ease-in-out;
