@@ -140,47 +140,45 @@ const fetchMoviesByCategory = async function (url, videoCollection) {
   }
 };
 
-// Function to load all collections
-const loadAllCollections = function () {
-  // Fetch trending movies
-  fetchMoviesByCategory(
-    `${def}/trending/all/week?api_key=${API_KEY}&language=en-US`,
-    videoCollection1
-  );
-
-  // Fetch action movies (genre ID: 28)
-  fetchMoviesByCategory(
-    `${def}/discover/movie?api_key=${API_KEY}&with_genres=28`,
-    videoCollection2
-  );
-
-  // Fetch comedy movies (genre ID: 35)
-  fetchMoviesByCategory(
-    `${def}/discover/movie?api_key=${API_KEY}&with_genres=35`,
-    videoCollection3
-  );
-
-  // Fetch horror movies (genre ID: 27)
-  fetchMoviesByCategory(
-    `${def}/discover/movie?api_key=${API_KEY}&with_genres=27`,
-    videoCollection4
-  );
-
-  // Fetch romance movies (genre ID: 10749)
-  fetchMoviesByCategory(
-    `${def}/discover/movie?api_key=${API_KEY}&with_genres=10749`,
-    videoCollection5
-  );
-
-  // Fetch top-rated movies
-  fetchMoviesByCategory(
-    `${def}/movie/top_rated?api_key=${API_KEY}&language=en-US`,
-    videoCollection6
-  );
+// Function to load all collections with promise
+const loadAllCollections = async function () {
+  try {
+    await Promise.all([
+      fetchMoviesByCategory(
+        `${def}/trending/all/week?api_key=${API_KEY}&language=en-US`,
+        videoCollection1
+      ),
+      fetchMoviesByCategory(
+        `${def}/discover/movie?api_key=${API_KEY}&with_genres=28`,
+        videoCollection2
+      ),
+      fetchMoviesByCategory(
+        `${def}/discover/movie?api_key=${API_KEY}&with_genres=35`,
+        videoCollection3
+      ),
+      fetchMoviesByCategory(
+        `${def}/discover/movie?api_key=${API_KEY}&with_genres=27`,
+        videoCollection4
+      ),
+      fetchMoviesByCategory(
+        `${def}/discover/movie?api_key=${API_KEY}&with_genres=10749`,
+        videoCollection5
+      ),
+      fetchMoviesByCategory(
+        `${def}/movie/top_rated?api_key=${API_KEY}&language=en-US`,
+        videoCollection6
+      )
+    ]);
+    console.log("All collections loaded successfully");
+  } catch (error) {
+    console.error("Error loading collections:", error);
+  }
 };
 
-// Initialize collections and detail closing
+// Initialize collections
 loadAllCollections();
+
+
 backBtn.addEventListener("click", closeDetail);
 
 const setupSearchClick = function (data) {
