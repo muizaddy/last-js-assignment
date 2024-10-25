@@ -63,7 +63,7 @@ body {
   max-width: 1900px;
   width: 99%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   /* overflow: hidden; */
 }
@@ -76,7 +76,7 @@ body {
 
 
 .grid-container .navbar .container .search-filter {
-  width: 70%;
+  width: 60%;
   display: flex;
   position: relative;
   justify-content: flex-start;
@@ -91,7 +91,7 @@ body {
   grid-auto-rows: minmax(auto, 350px);
   top: 35px;
   left: 20%;
-  max-width: 400px;
+  max-width: 500px;
   z-index: 20;
   transform: translateY(50px);
   margin: auto;
@@ -630,5 +630,4 @@ body {
     cursor: pointer;
   }
   
-
 }
