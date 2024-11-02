@@ -484,6 +484,37 @@ body {
   cursor: pointer;
 }
 
+/* watchlist management */
+
+.added-list{
+  border-radius: 10px;
+  background-color: #fff;
+  color: var(--utility);
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+}
+
+.watch-img{
+  width: 40%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: contain;
+  
+}
+.single-watch{
+  width: 80%;
+  display: flex;
+  /* justify-content: stretch; */
+  align-items: center;
+}
+.watch-desc{
+  padding: 0px 5px;
+  width: 70%;
+}
+.options{
+  width: 5%;
+}
 /* MEDIA QUERIES */
 @media screen and (max-width: 1278px) {
   .grid-container .navbar {
@@ -670,18 +701,25 @@ body {
     .movie-details {
       display: flex;
       flex-direction: column;
-      width: 100%;
+      /* width: 100%; */
       height: 100%;
       justify-content: center;
       align-items: flex-start;
     }
     .movie-details .back-button {
       position: relative;
-      left: 50%;
+      /* left: 50%; */
+      top: 300px;
+      width: 50%;
+        margin: auto;
     }
     .movie-details .back-button:active {
       transform: translateY(2px);
     }
     
-
+    .btn-watch {
+      margin-bottom: 10px;
+    }
   }
+
+  

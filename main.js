@@ -13,8 +13,8 @@ const videoCollection6 = document.querySelector(".vid_collection--6");
 const gridContainer = document.querySelector(".grid-container");
 const inputSearch = document.querySelector(".search");
 const searchList = document.querySelector(".search-lists");
-const btnMode = document.querySelector('.btn-mode')
-const btnDark = document.querySelector('.btn-dark')
+const btnAdd = document.querySelector('.add')
+const btnRemove = document.querySelector('.remove')
 const API_KEY = "461c53ea7bdbc95cbe992f31719b7a20";
 const def = "https://api.themoviedb.org/3";
 const POSTER_URL = "https://image.tmdb.org/t/p/original";
@@ -215,3 +215,15 @@ const hideSearchOnOutsideClick = function () {
 
 // Call the function to handle outside clicks
 hideSearchOnOutsideClick();
+
+btnAdd.addEventListener('click', function(){
+  console.log('added to book mark');
+})
+btnRemove.addEventListener('click', function(){
+  console.log('Removed from book mark');
+})
+
+
+
+
+
